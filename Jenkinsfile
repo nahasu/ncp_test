@@ -11,7 +11,7 @@ node {
              app.push("latest")
          }
      }
- }
+
      stage('Deploy') {
         sh 'docker pull nseal98/mywas:${env.BUILD_NUMBER}'
         sh 'docker stop your-container && docker rm your-container || true'
